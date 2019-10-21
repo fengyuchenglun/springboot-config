@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @author fengyuchenglun
  * @version 1.0.0
  */
-@Component
+//@Component
 public class TestConsumer {
 
     /**
