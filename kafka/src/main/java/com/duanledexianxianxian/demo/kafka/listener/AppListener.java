@@ -46,7 +46,7 @@ public class AppListener implements ApplicationListener<ApplicationReadyEvent> {
             });
 
             try {
-                Thread.sleep(5000);
+                Thread.sleep(new Random().nextInt(6) * 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -56,8 +56,8 @@ public class AppListener implements ApplicationListener<ApplicationReadyEvent> {
 
     private void sendData(int i) {
         Student student = new Student();
-        student.setStudentId("duanledexianxianxian" + i);
-        student.setName(RandomStringUtils.randomAlphabetic(10));
+        student.setStudentId(String.valueOf(i));
+        student.setName("duanledexianxianxian" + new Random().nextInt(20));
         student.setAge(new Random().nextInt(19) + 6);
         student.setSex(Byte.valueOf(String.valueOf((new Random().nextInt(2)))));
         log.info("Thread:{}  Send Data:{}", Thread.currentThread().getName(), student);
