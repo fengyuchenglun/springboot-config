@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @author fengyuchenglun
  * @version 1.0.0
  */
-//@Component
+@Component
 public class TestConsumer {
 
     /**
@@ -19,7 +19,7 @@ public class TestConsumer {
      * @param record the record
      * @throws Exception the exception
      */
-    @KafkaListener(topics = "topic_first")
+    @KafkaListener(topics = "topic_second")
     public void listen(ConsumerRecord<?, ?> record) throws Exception {
         System.out.printf("topic = %s, offset = %d, value = %s \n", record.topic(), record.offset(), record.value());
     }
