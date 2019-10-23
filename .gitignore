@@ -81,3 +81,5 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+/.idea/.name
+/.idea/vcs.xml
