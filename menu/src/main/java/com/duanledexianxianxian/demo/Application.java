@@ -50,17 +50,23 @@ public class Application {
         }
     }
 
+    /**
+     * 平级列表转成树结构
+     * @param menuList
+     * @return
+     */
     private static MenuVO getTreeMenuVO(List<Menu> menuList) {
         if (CollectionUtils.isEmpty(menuList)) {
             return null;
         }
         List<MenuVO> menuVOList = Lists.newArrayList();
+        // 类型转换 一层循环
         menuList.forEach(x -> {
             MenuVO menuVO = new MenuVO();
             BeanUtils.copyProperties(x, menuVO);
             menuVOList.add(menuVO);
         });
-        // 转成map
+        // 转成map  二层循环  一层与二层可以合并
         Map<String, MenuVO> menuMap = menuVOList.stream().collect(Collectors.toMap(MenuVO::getMenuCode, x -> x));
         // 构建根节点
         MenuVO menuVO = new MenuVO();
@@ -68,6 +74,7 @@ public class Application {
         menuVO.setMenuCode("root");
         menuVO.setMenuTitle("根节点");
 
+        // 转换逻辑  三层循环
         for (MenuVO menu : menuVOList) {
             if (menuMap.containsKey(menu.getParentMenuCode())) {
                 if (menuMap.get(menu.getParentMenuCode()).getChildren() == null) {
