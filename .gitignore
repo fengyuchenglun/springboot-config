@@ -84,3 +84,5 @@ buildNumber.properties
 /.idea/.name
 /.idea/vcs.xml
 .idea
+!/demo-parent.iml
+!/demo-parent.iml
