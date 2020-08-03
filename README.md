@@ -284,7 +284,7 @@ private SystemProperties systemProperties;
 1. @ConfigurationProperties配置集中化。所有关于system相关的属性，我们都可以在SystemProperties中获取，一目了然，代码可读性高。如果需要修改属性key，不需要找到所有引用key的地方。
 2. @ConfigurationProperties即使配置文件中没有相关key，也不会导致应用启动失败。
 
-**代码地址：**
+**代码地址：** https://github.com/fengyuchenglun/springboot-config
 
 ## 总结
 
