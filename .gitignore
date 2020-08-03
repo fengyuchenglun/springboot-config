@@ -86,3 +86,4 @@ buildNumber.properties
 .idea
 !/demo-parent.iml
 !/demo-parent.iml
+!/.idea/
