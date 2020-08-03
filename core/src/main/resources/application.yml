@@ -1,5 +1,9 @@
 server:
   port: 8080
 
+#系统相关配置
 system:
+#  系统名称
   name: "classpath root config"
+#  系统编码
+  code: "classpath root code"
