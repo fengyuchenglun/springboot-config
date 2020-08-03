@@ -302,11 +302,11 @@ private SystemProperties systemProperties;
 
 
 
-## 参考链接
+## [参考链接](https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/)
 
-1. [SpringBoot读取配置文件的6种方式]: https://my.oschina.net/imlim/blog/1859091
+1. [SpringBoot读取配置文件的6种方式](https://my.oschina.net/imlim/blog/1859091)
 
-2. [Spring Boot官方参考文档]: https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/
+2. [Spring Boot官方参考文档](https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html)
 
    
 
